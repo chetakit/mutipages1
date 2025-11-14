@@ -1,0 +1,68 @@
+.home-container {
+  text-align: center;
+  color: #222; /* ✅ ตัวหนังสือเข้มขึ้น */
+}
+
+.home-title {
+  color: #b89b2f; /* ✅ ทองเข้มอ่านง่าย */
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
+}
+
+.info-text ul, 
+.info-text li,
+.contact h3 {
+  color: #222; /* ✅ ให้ข้อความในส่วนข้อมูลเป็นดำทั้งหมด */
+}
+
+.contact i {
+  font-size: 2.5rem;
+  margin: 10px;
+  color: #d4af37;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.contact i:hover {
+  transform: scale(1.2);
+  color: #b68d2a;
+}
+
+
+.student-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 2rem;
+}
+
+.student-photo {
+  width: 280px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+.info-text ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.info-text li {
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+.contact i {
+  font-size: 2.5rem;
+  margin: 10px;
+  color: #f7e597;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.contact i:hover {
+  transform: scale(1.2);
+  color: #d4af37;
+}

@@ -1,0 +1,60 @@
+.checkout-box {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+/* 🌈 Glow ตอน checkout */
+.checkout-glow {
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.6),
+              0 0 50px rgba(255, 215, 0, 0.4);
+  border: 2px solid gold;
+  transform: scale(1.02);
+}
+
+/* 🌬 fade out หรูตอน success */
+.checkout-fadeout {
+  animation: fadeOutBox 1.2s ease forwards;
+}
+
+@keyframes fadeOutBox {
+  0% { opacity: 1; transform: scale(1.02); }
+  100% { opacity: 0; transform: scale(0.9); }
+}
+
+/* 🌟 อนุภาคทอง */
+.gold-particle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #ffd700, #ffb400);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: particle-burst 1.2s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes particle-burst {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  70% {
+    transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y)))
+      scale(1.3);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y)))
+      scale(0.5);
+  }
+}
+
+/* ป้องกัน modal backdrop คลิกไม่ได้ */
+.modal-backdrop.show {
+  opacity: 0.4 !important;
+  pointer-events: none !important;
+}

@@ -1,0 +1,47 @@
+/* -----------------------------
+   ✅ reset ทั่วไป (ยังคงความคมชัดของ font)
+------------------------------ */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #213547;
+  background-color: #ffffff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* -----------------------------
+   ✅ anchor link 
+------------------------------ */
+a {
+  font-weight: 500;
+  color: #0d6efd; /* สีฟ้า Bootstrap */
+  text-decoration: none;
+}
+a:hover {
+  color: #0a58ca; /* สี hover ของ Bootstrap */
+}
+
+/* -----------------------------
+   ✅ body layout
+------------------------------ */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;     /* ✅ ให้ขยายตามเนื้อหา */
+  height: auto;          /* ✅ ไม่ล็อกความสูง */
+  overflow-x: hidden;    /* ✅ กันแนวนอน */
+  overflow-y: auto;      /* ✅ เปิดเลื่อนแนวตั้ง */
+  background-color: #ffffff; /* ✅ พื้นหลังขาวจริง */
+}
+
+
+/* -----------------------------
+   ❌ ลบส่วนที่แตะต้องปุ่มของ Bootstrap ออก
+   ✅ ใช้แค่ margin หรือ shadow ถ้าต้องการ
+------------------------------ */
+button {
+  cursor: pointer;
+}

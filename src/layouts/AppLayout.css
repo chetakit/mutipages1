@@ -1,0 +1,154 @@
+/* ✅ Layout ทั่วไป */
+.app-layout {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ffffff, #f7f5ee);
+  color: #111;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.4s ease;
+}
+
+/* ✅ Navbar ให้อยู่ตรงกลาง */
+.layout-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  border-radius: 14px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.navbar-wrapper:hover {
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+  transform: scale(1.02);
+}
+
+/* ✅ ปุ่มใน Navbar */
+.navbar-wrapper a {
+  color: #000 !important;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  transition: all 0.3s ease;
+}
+
+/* ✅ ปุ่มใน Navbar */
+.navbar-wrapper a {
+  position: relative;
+  color: #000 !important;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  background: white;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* ✨ เอฟเฟกต์แสงทองไหล */
+.navbar-wrapper a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 215, 0, 0.6),
+    transparent
+  );
+  transition: all 0.6s;
+}
+
+/* 🟡 เมื่อ hover จะมีแสงทองวิ่งผ่าน */
+.navbar-wrapper a:hover::before {
+  left: 100%;
+}
+
+/* 🌟 เอฟเฟกต์ hover เด้งและ glow */
+.navbar-wrapper a:hover {
+  color: #000;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  background: linear-gradient(180deg, #fffef3, #fff7b0);
+}
+
+
+/* ✅ Role + Logout อยู่ขวาบน */
+.layout-role {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* 🌬 เอฟเฟกต์ Logout */
+.logout-slide {
+  animation: slideOut 1.5s ease forwards;
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+}
+
+/* 👋 Emoji บ๊ายบาย */
+.logout-avatar {
+  position: fixed;
+  bottom: 45%;
+  left: 50%;
+  transform: translate(-50%, 50%) scale(0);
+  font-size: 5rem;
+  z-index: 9999;
+  animation: waveEmoji 1.4s ease forwards;
+  filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.9));
+}
+
+@keyframes waveEmoji {
+  0% {
+    transform: translate(-50%, 50%) scale(0);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(-50%, -10%) scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -20%) rotate(15deg) scale(1);
+  }
+  65% {
+    transform: translate(-50%, -20%) rotate(-15deg) scale(1);
+  }
+  80% {
+    transform: translate(-50%, -20%) rotate(15deg) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 0;
+  }
+}
